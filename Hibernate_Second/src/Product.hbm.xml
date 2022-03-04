@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hibernate.model">
+	<class name="Product" table="p1table">
+        <id name="P1Code">        	
+            <column name="Pcode" />   
+         </id>
+        <property name="P1Name">
+            <column name="Pname" length="20" />
+        </property>
+        <property name="P1Brand">
+            <column name="Pbrand" length="20" />
+        </property>
+        <property name="ManufacturingDate" >
+            <column name="Mnfgdate"/>
+        </property>        
+        
+        <!-- when db column name is not specifed it will take same name as property name -->
+       <property name="P1Price" > 
+            <column name="Price" />    		        
+        </property>
+        
+    </class>
+    </hibernate-mapping>
